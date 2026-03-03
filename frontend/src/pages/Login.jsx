@@ -24,7 +24,7 @@ export function Login() {
       const { data } = await authApi.login({ email: email.trim(), password });
       if (data.success) {
         login(data.user, data.token);
-        toast.success('Welcome back!');
+        toast.success('Welcome back! Reserve now a room.');
         navigate(from, { replace: true });
       }
     } catch (err) {
